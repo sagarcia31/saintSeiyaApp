@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H2k-sD-xKa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Saint_Seiya_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rGI-ug-3CB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rGI-ug-3CB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SI6-13-OJ7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rGI-ug-3CB" secondAttribute="bottom" id="ZTT-Kn-H55"/>
+                            <constraint firstItem="rGI-ug-3CB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lmK-Cf-HL7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rGI-ug-3CB" secondAttribute="trailing" id="mGH-qm-fmc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HXZ-mG-Rif"/>
+                    <connections>
+                        <outlet property="tableView" destination="rGI-ug-3CB" id="oNb-Xa-J1p"/>
+                        <segue destination="0Me-z1-R5O" kind="show" identifier="detailSegue" id="9Vs-El-4Yg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713.04347826086962" y="130.58035714285714"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="UyJ-vl-I6A">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="0Me-z1-R5O" customClass="DetailViewController" customModule="Saint_Seiya_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="907-59-ceq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seiya" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-fl-hrq">
+                                <rect key="frame" x="107" y="118" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fv7-m5-fgW"/>
+                                    <constraint firstAttribute="width" constant="200" id="la0-3a-E9u"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPg-8v-YIO">
+                                <rect key="frame" x="165.5" y="368" width="83" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzJ-7G-31a">
+                                <rect key="frame" x="20" y="438" width="374" height="264"/>
+                                <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eig-bM-uzP">
+                                <rect key="frame" x="20" y="782" width="374" height="55"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="WcF-QO-qu2"/>
+                                </constraints>
+                                <state key="normal" title="Ver foto">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.97254901959999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectPhotoButton:" destination="0Me-z1-R5O" eventType="touchUpInside" id="FBh-ta-mw6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hno-tp-bmT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QzJ-7G-31a" firstAttribute="top" secondItem="pPg-8v-YIO" secondAttribute="bottom" constant="28" id="3TK-e9-pv8"/>
+                            <constraint firstItem="aTf-fl-hrq" firstAttribute="top" secondItem="hno-tp-bmT" secondAttribute="top" constant="30" id="GpN-C5-kcd"/>
+                            <constraint firstItem="QzJ-7G-31a" firstAttribute="leading" secondItem="hno-tp-bmT" secondAttribute="leading" constant="20" id="HHs-ZH-evR"/>
+                            <constraint firstItem="hno-tp-bmT" firstAttribute="trailing" secondItem="eig-bM-uzP" secondAttribute="trailing" constant="20" id="JbA-yk-uAy"/>
+                            <constraint firstItem="eig-bM-uzP" firstAttribute="leading" secondItem="hno-tp-bmT" secondAttribute="leading" constant="20" id="QhA-vQ-VWR"/>
+                            <constraint firstItem="hno-tp-bmT" firstAttribute="bottom" secondItem="eig-bM-uzP" secondAttribute="bottom" constant="25" id="WmT-Wl-mrK"/>
+                            <constraint firstItem="pPg-8v-YIO" firstAttribute="top" secondItem="aTf-fl-hrq" secondAttribute="bottom" constant="50" id="dHP-Ri-uCe"/>
+                            <constraint firstItem="pPg-8v-YIO" firstAttribute="centerX" secondItem="907-59-ceq" secondAttribute="centerX" id="hm1-2U-DJH"/>
+                            <constraint firstItem="aTf-fl-hrq" firstAttribute="centerX" secondItem="907-59-ceq" secondAttribute="centerX" id="jp9-oo-hBX"/>
+                            <constraint firstAttribute="trailing" secondItem="QzJ-7G-31a" secondAttribute="trailing" constant="20" id="sfp-Qz-QzP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vUH-h8-aeB"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="QzJ-7G-31a" id="oP7-Py-ZJR"/>
+                        <outlet property="imageView" destination="aTf-fl-hrq" id="mEu-99-fy1"/>
+                        <outlet property="titleLabel" destination="pPg-8v-YIO" id="PiO-K8-9Ws"/>
+                        <segue destination="Vub-Ij-2jb" kind="presentation" identifier="photoSegue" id="pDr-rF-LEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cJ-pq-Nkj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.8550724637682" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fn2-qW-YVF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H2k-sD-xKa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yZl-3W-25d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qNl-fe-yn1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCd-3L-9Ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="130.58035714285714"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="RBP-7F-mkH">
+            <objects>
+                <viewController id="Vub-Ij-2jb" customClass="PhotoViewController" customModule="Saint_Seiya_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3NY-AF-O6s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seiya" translatesAutoresizingMaskIntoConstraints="NO" id="6mt-Px-mGJ">
+                                <rect key="frame" x="107" y="30" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UJC-4v-CTU"/>
+                                    <constraint firstAttribute="width" constant="200" id="xwv-em-27j"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seiya é um cavaleiro de qual tipo?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P72-KQ-ZAf">
+                                <rect key="frame" x="30" y="272" width="354" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZH1-gH-VqR">
+                                <rect key="frame" x="30" y="343" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VF-Im-J7U">
+                                <rect key="frame" x="20" y="416" width="374" height="55"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="IAp-HP-oaD"/>
+                                </constraints>
+                                <state key="normal" title="Ver resposta">
+                                    <color key="titleColor" red="0.98431372549999996" green="0.97254901959999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didSelectAnswerButton:" destination="Vub-Ij-2jb" eventType="touchUpInside" id="t9J-Xc-95j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g7m-U0-h09"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P72-KQ-ZAf" firstAttribute="leading" secondItem="g7m-U0-h09" secondAttribute="leading" constant="30" id="27n-tk-CmD"/>
+                            <constraint firstItem="P72-KQ-ZAf" firstAttribute="top" secondItem="6mt-Px-mGJ" secondAttribute="bottom" constant="42" id="4WG-NH-a3F"/>
+                            <constraint firstItem="g7m-U0-h09" firstAttribute="trailing" secondItem="6VF-Im-J7U" secondAttribute="trailing" constant="20" id="CtB-qQ-MVb"/>
+                            <constraint firstItem="ZH1-gH-VqR" firstAttribute="top" secondItem="P72-KQ-ZAf" secondAttribute="bottom" constant="48" id="F5x-gq-Eoj"/>
+                            <constraint firstItem="6VF-Im-J7U" firstAttribute="leading" secondItem="g7m-U0-h09" secondAttribute="leading" constant="20" id="MfC-Kn-jED"/>
+                            <constraint firstItem="g7m-U0-h09" firstAttribute="trailing" secondItem="P72-KQ-ZAf" secondAttribute="trailing" constant="30" id="OMi-jJ-PrZ"/>
+                            <constraint firstItem="ZH1-gH-VqR" firstAttribute="leading" secondItem="g7m-U0-h09" secondAttribute="leading" constant="30" id="WOl-GP-H5k"/>
+                            <constraint firstItem="6mt-Px-mGJ" firstAttribute="top" secondItem="g7m-U0-h09" secondAttribute="top" constant="30" id="Wuf-uh-IPp"/>
+                            <constraint firstItem="6VF-Im-J7U" firstAttribute="top" secondItem="ZH1-gH-VqR" secondAttribute="bottom" constant="39" id="XoZ-6h-UiZ"/>
+                            <constraint firstItem="g7m-U0-h09" firstAttribute="trailing" secondItem="ZH1-gH-VqR" secondAttribute="trailing" constant="30" id="bJu-tq-DGk"/>
+                            <constraint firstItem="6mt-Px-mGJ" firstAttribute="centerX" secondItem="3NY-AF-O6s" secondAttribute="centerX" id="fgp-Rq-Hy6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yHT-mf-5xU"/>
+                    <connections>
+                        <outlet property="imageView" destination="6mt-Px-mGJ" id="Bzp-OL-LEd"/>
+                        <outlet property="textField" destination="ZH1-gH-VqR" id="hxK-5e-M7V"/>
+                        <outlet property="titleLabel" destination="P72-KQ-ZAf" id="EFU-ab-ViQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DrS-ow-yIB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2524.6376811594205" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="seiya" width="109.5" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
